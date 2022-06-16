@@ -1,0 +1,61 @@
+﻿<Window x:Class="Project_nhom7.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_nhom7"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/anh nen.jpg"/>
+        </Grid.Background>
+        <Label Content="Tìm Theo" HorizontalAlignment="Left" Margin="25,40,0,0" VerticalAlignment="Top" Background="#FFD2D2D2" Width="59"/>
+        <Label Content="Chương" HorizontalAlignment="Left" Margin="25,88,0,0" VerticalAlignment="Top" Background="#FFDCD836" Width="60" Height="25"/>
+        <Label Content="Nội Dung &#xD;&#xA; Chương" HorizontalAlignment="Left" Margin="24,132,0,0" VerticalAlignment="Top" Background="#FFDCD836" RenderTransformOrigin="0.153,-1.023" Height="42" Width="61"/>
+        <Label Content="    Mục" HorizontalAlignment="Left" Margin="24,193,0,0" VerticalAlignment="Top" Background="#FFDCD836" Width="62" Height="25"/>
+        <Label Content="Nội Dung &#xD;&#xA;    Mục" HorizontalAlignment="Left" Margin="24,235,0,0" VerticalAlignment="Top" Background="#FFDCD836" Height="42" Width="62"/>
+        <Label Content="    Điều" HorizontalAlignment="Left" Margin="25,296,0,0" VerticalAlignment="Top" Background="#FFDCD836" Width="61" Height="24"/>
+        <TextBox x:Name="txtChuong" HorizontalAlignment="Left" Margin="119,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="26"/>
+        <TextBox x:Name="txtNoidungchuong" HorizontalAlignment="Left" Margin="119,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="43" RenderTransformOrigin="0.478,0.643"/>
+        <TextBox x:Name="txtMuc" HorizontalAlignment="Left" Margin="121,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Height="25"/>
+        <TextBox x:Name="txtNoidungmuc" HorizontalAlignment="Left" Margin="123,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="42"/>
+        <TextBox x:Name="txtDieu" HorizontalAlignment="Left" Margin="123,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="25"/>
+        <TextBox x:Name="txtNoidungdieu" HorizontalAlignment="Left" Margin="117,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" Height="66"/>
+        <Label Content="Nội Dung &#xD;&#xA;    Điều" HorizontalAlignment="Left" Margin="25,341,0,0" VerticalAlignment="Top" Background="#FFDCD836" Width="61" Height="47"/>
+        <Label Content="  Khoản" HorizontalAlignment="Left" Margin="248,86,0,0" VerticalAlignment="Top" Background="#FFDCD836" Width="59"/>
+        <TextBox x:Name="txtKhoan" HorizontalAlignment="Left" Margin="331,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Height="28"/>
+        <Label Content="      Nội Dung Khoản" HorizontalAlignment="Left" Margin="249,128,0,0" VerticalAlignment="Top" Background="#FFDCD836" Width="137"/>
+        <TextBox x:Name="txtNoidungkhoan" HorizontalAlignment="Left" Margin="250,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="173"/>
+        <ComboBox x:Name="cbbox" HorizontalAlignment="Left" Margin="121,39,0,0" VerticalAlignment="Top" Width="100" Height="28">
+            <ComboBoxItem Content="Chương"/>
+            <ComboBoxItem Content="Mục"/>
+            <ComboBoxItem Content="Điều"/>
+            <ComboBoxItem Content="Khoản"/>
+        </ComboBox>
+
+        <Button x:Name="btn_Search" Content="Tìm Kiếm" HorizontalAlignment="Left" Margin="249,38,0,0" VerticalAlignment="Top" Width="56" Height="28" Click="btn_Search_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/anh search.png"/>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="dataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="423,34,2,94" Background="#FF53534F"/>
+        <Button Content="Thêm" HorizontalAlignment="Left" Margin="307,363,0,0" VerticalAlignment="Top" Height="40" Width="94" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/anh add.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_Xoa" Content="Xóa" HorizontalAlignment="Left" Margin="456,362,0,0" VerticalAlignment="Top" Height="39" Width="90" Click="btn_Xoa_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/anh delete.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_Sua" Content="Sửa" HorizontalAlignment="Left" Margin="619,363,0,0" VerticalAlignment="Top" Height="38" Width="87" Click="btn_Sua_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/anh edit.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtTimkiem" HorizontalAlignment="Left" Margin="330,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Height="28"/>
+
+    </Grid>
+</Window>
